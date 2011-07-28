@@ -12,8 +12,9 @@
 static BOOL is_chromium() {
     BOOL chrome = [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.google.Chrome"];
     BOOL chromium = [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"org.chromium.Chromium"];
+    BOOL chromeCanary = [[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.google.Chrome.canary"];
     
-    return (chrome || chromium);
+    return (chrome || chromium || chromeCanary);
 }
 
 static BOOL window_is_fullscreen(NSWindow *window) {
